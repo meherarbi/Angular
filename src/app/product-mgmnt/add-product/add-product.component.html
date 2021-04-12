@@ -1,0 +1,46 @@
+<form>
+
+    <div class="form-group">
+      <label for="labelId">Label</label>
+      <input type="text" name="label" class="form-control" id="labdelId" placeholder="Enter product label"
+      [(ngModel)]="p.label">
+    </div>
+   
+    <div class="form-group">
+      <label for="shortDescriptionId">Short description</label>
+      <input type="text" class="form-control" id="shortDescriptionId" placeholder="Short description">
+    </div>
+
+    <div class="form-group">
+      <label for="longDescriptionId">Long description</label>
+      <textarea class="form-control" id="longDescriptionId" placeholder="Long description" ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="priceId">Price</label>
+      <input type="number" class="form-control" id="priceId" placeholder="Price">
+    </div>
+
+    <div class="form-group">
+      <label for="discountId">Discount</label>
+      <input type="number" class="form-control" id="discountId" placeholder="Discount">
+    </div>
+
+    <div class="form-group">
+      <label for="quantityId">Quantity</label>
+      <input type="number" class="form-control" id="quantityId" placeholder="Quantity">
+    </div>
+
+
+    <div class="form-group col-md-4">
+      <label for="categoryId">Category</label>
+      <select name="category"  id="categoryId" class="form-control" [(ngModel)]="p.category">
+
+        <option *ngFor="let o of options" [ngValue]="o">
+          {{o.label}}
+        </option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="save()">Save</button>
+  </form>

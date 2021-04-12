@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "label": "Arbre Artificiel",
+      "shortDescription": "Joli arbre de 1m",
+      "longDescription": "bla bla bla bla",
+      "price": 30,
+      "discount": 5,
+      "quantity": 10,
+      "category": {
+        "id": 1,
+        "label": "Jardin",
+        "description": "Décroation et fournitures de jardin"
+      }
+    },
+    {
+      "id": 2,
+      "label": "Pantalon jean",
+      "shortDescription": "pantalon pour hommes",
+      "longDescription": "bla bla bla bla",
+      "price": 45,
+      "discount": 7,
+      "quantity": 12,
+      "category": {
+        "id": 2,
+        "label": "Mode",
+        "description": "vêtements femme, homme et enfants"
+      }
+    },
+    {
+      "label": "Survêtement",
+      "category": {
+        "label": "Sportswear",
+        "description": "Vêtement de sprots",
+        "id": 4
+      },
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "label": "Jardin",
+      "description": "Décroation et fournitures de jardin"
+    },
+    {
+      "label": "Sportswear",
+      "description": "Vêtement de sprots",
+      "id": 4
+    }
+  ],
+  "suppliers": [
+    {
+      "name": "Toto",
+      "phone": "12345678",
+      "adresse": "Tunis",
+      "id": 1
+    },
+    {
+      "name": "foo",
+      "phone": "12369985",
+      "adresse": "Barcelone",
+      "id": 2
+    },
+    {
+      "name": "Med Salah",
+      "phone": "258963147",
+      "adresse": "Italie",
+      "id": 3
+    },
+    {
+      "name": "ali",
+      "phone": "258963",
+      "adresse": "dddddd",
+      "id": 4
+    },
+    {
+      "name": "Amany",
+      "phone": "25896311",
+      "adresse": "Turkie",
+      "id": 5
+    }
+  ]
+}

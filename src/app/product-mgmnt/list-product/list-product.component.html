@@ -1,0 +1,25 @@
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Label</th>
+            <th>Short Description</th>
+            <th>Long Description</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Quantity</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let _element of products">
+            <td>{{_element.label}}</td>
+            <td>{{_element.shortDescription}}</td>
+            <td>{{_element.longDescription}}</td>
+            <td>{{_element.price}}</td>
+            <td>{{_element.discount}}</td>
+            <td>{{_element.quantity}}</td>
+            <td>{{_element.category.label}}</td>
+        </tr>
+    </tbody>
+
+</table>

@@ -1,0 +1,36 @@
+<!--<table border="1">
+
+    <thead>
+        <td>Label</td>
+        <td>Description</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of categories">
+            <td>{{c.label}}</td>
+            <td>{{c.description}}</td>
+        </tr>
+    </tbody>
+
+</table>-->
+
+<div class="card">
+    <h5>Liste des catégories</h5>
+    <p-table [value]="categories">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="label">Label <p-sortIcon field="label"></p-sortIcon></th>
+                <th pSortableColumn="description">Description <p-sortIcon field="description"></p-sortIcon></th>
+                <th style="width: 8rem"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-c>
+            <tr>
+                <td>{{c.label}}</td>
+                <td>{{c.description}}</td>
+                <td >
+                    <button pButton type="button" icon="pi pi-trash" (click)="deleteCategory(c)"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

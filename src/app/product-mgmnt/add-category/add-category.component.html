@@ -1,0 +1,33 @@
+ <form [formGroup]="addCategoryForm" (ngSubmit)="save()">
+
+    <div class="form-group">
+        <label for="labelId">Label</label>
+        <input formControlName="label" type="text" name="label" class="form-control" id="labdelId"
+            placeholder="Enter category label">
+        <div
+        [ngClass] = "'error'"
+        *ngIf="addCategoryForm.controls.label?.errors?.required">
+            Le label est obligatoire
+        </div>
+        <div 
+        [ngClass] = "'error'"
+        *ngIf="addCategoryForm.controls.label?.errors?.minlength">
+            Le label est de taille min égale à 10
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="descriptionId">Short description</label>
+        <input formControlName="description" type="text" class="form-control" id="descriptionId"
+            placeholder="Category description">
+        <div 
+        [ngClass] = "'error'"
+        *ngIf="addCategoryForm.controls.description?.errors?.minlength">
+            La taille du desccriptif est de taille min égale à 10
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="reset" class="btn btn-warning" (click)="reset()">Reset</button>
+</form>
